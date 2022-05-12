@@ -20,11 +20,12 @@ pipeline {
                 """
             }
         }
+
 	stage ('Test') {
 		when {
 			branch 'PR-*'
 		}
-		step {
+		steps {
 			echo 'lo hace'
 		}
 	}
