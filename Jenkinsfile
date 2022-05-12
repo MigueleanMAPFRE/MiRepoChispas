@@ -16,6 +16,7 @@ pipeline {
                    hostname
                    ls -la
                    pwd
+		   sh ejecuta.sh
                 """
             }
         }
