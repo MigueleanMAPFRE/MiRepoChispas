@@ -9,7 +9,7 @@ pipeline {
         }
     }
  
-    agent any
+    agent docker-agent
 
     stages {
         stage('Build') {
