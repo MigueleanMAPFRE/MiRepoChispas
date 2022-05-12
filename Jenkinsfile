@@ -7,7 +7,6 @@ pipeline {
                 echo 'Hello World'
             }
         }
-    }
  
  
          stage ('Ejemplo shell script') {
@@ -20,5 +19,6 @@ pipeline {
                 """
             }
         }
+    }
     }
 
