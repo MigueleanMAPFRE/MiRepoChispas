@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                echo 'Hola TRON, ¿como tu TaaS?'
             }
         }
  
@@ -20,6 +20,15 @@ pipeline {
                 """
             }
         }
+	stage ('Test') {
+		when {
+			branch 'PR-*'
+		}
+		step {
+			echo 'lo hace'
+		}
+	}
+
     }
     }
 
