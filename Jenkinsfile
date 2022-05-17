@@ -26,7 +26,7 @@ pipeline {
 			branch 'PR-*'
 		}
 		steps {
-			echo 'lo hace'
+			sh "bash test.sh"
 		}
 	}
 
