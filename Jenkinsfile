@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                echo 'Hola TRON, ¿como tu TaaS?'
             }
         }
  
@@ -16,9 +16,20 @@ pipeline {
                    hostname
                    ls -la
                    pwd
+		   sh ejecuta.sh
                 """
             }
         }
+
+	stage ('Test') {
+		when {
+			branch 'PR-*'
+		}
+		steps {
+			sh "bash test.sh"
+		}
+	}
+
     }
     }
 
